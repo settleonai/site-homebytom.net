@@ -3,281 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home by Tom — Expert Home Remodeling in the East Bay</title>
-<meta name="description" content="East Bay's premier home remodeling team. Kitchen, bathroom, ADU & whole-home renovation in Walnut Creek, Danville, Lafayette, Orinda & beyond.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Home by Tom — Kitchen & Bath Remodeling Experts</title>
+<meta name="description" content="Expert kitchen and bathroom remodeling across the Bay Area. Custom designs, premium materials, 21+ years experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
---navy:#1B2A41;--amber:#D97706;--amber-hover:#b45309;--white:#FFFFFF;
---light:#F8FAFC;--charcoal:#374151;--charcoal-light:#6B7280;
---font-heading:'DM Serif Display',Georgia,serif;
---font-body:'Inter',system-ui,sans-serif;
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #A0785A; --primary-dark: #856044; --primary-light: #C49E80;
+  --dark: #1E1510; --dark-light: #5C4A3A;
+  --text: #3A2E24; --text-light: #8A7A6A;
+  --bg: #FDFBF8; --bg-alt: #F3EDE6; --white: #FFFFFF;
 }
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);color:var(--charcoal);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-.container{max-width:1140px;margin:0 auto;padding:0 24px}
+body { font-family: 'Roboto', sans-serif; color: var(--text); line-height: 1.6; }
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; color: var(--dark); line-height: 1.2; font-weight: 700; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-block; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.25s; cursor: pointer; border: none; font-family: 'Poppins', sans-serif; }
+.btn-primary { background: var(--primary); color: var(--white); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.btn-white { background: var(--white); color: var(--dark); }
+.btn-white:hover { background: #F1F5F9; }
+.btn-outline { border: 2px solid var(--primary-light); color: var(--primary-light); background: transparent; }
+.btn-outline:hover { background: var(--primary-light); color: var(--white); }
+.section-label { display: inline-block; color: var(--primary); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.section-title { font-size: clamp(28px, 4vw, 42px); margin-bottom: 16px; }
+.section-subtitle { color: var(--text-light); font-size: 17px; max-width: 640px; }
+.text-center { text-align: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
 
-/* Header */
-.header{background:var(--navy);padding:14px 0}
-.header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer .logo{font-family:var(--font-heading);font-size:26px;color:var(--white)}
-footer .logo span{color:var(--amber)}
-.header-right{display:flex;align-items:center;gap:24px}
-
-.header-cta{background:var(--amber);color:var(--white);padding:10px 24px;border-radius:6px;font-weight:600;font-size:14px;transition:background .2s}
-.header-cta:hover{background:var(--amber-hover)}
-
-/* Hero */
-.hero{position:relative;min-height:580px;display:flex;align-items:center}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1600&q=80') center/cover no-repeat}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(27,42,65,.92) 0%,rgba(27,42,65,.65) 60%,rgba(27,42,65,.3) 100%)}
-.hero-content{position:relative;z-index:2;padding:80px 0;max-width:580px}
-.hero-tag{display:inline-block;background:rgba(217,119,6,.15);border:1px solid var(--amber);color:var(--amber);padding:6px 16px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-.hero h1{font-family:var(--font-heading);color:var(--white);font-size:48px;line-height:1.15;margin-bottom:18px}
-.hero p{color:rgba(255,255,255,.8);font-size:17px;line-height:1.7;margin-bottom:28px}
-.btn-primary{background:var(--amber);color:var(--white);padding:16px 36px;border-radius:6px;font-weight:600;font-size:16px;transition:background .2s;display:inline-block}
-.btn-primary:hover{background:var(--amber-hover)}
-.hero-serving{color:rgba(255,255,255,.5);font-size:13px;margin-top:16px}
-
-/* Section Utilities */
-.section-label{color:var(--amber);font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:12px}
-.section-title{font-family:var(--font-heading);font-size:38px;color:var(--navy);margin-bottom:16px}
-.section-subtitle{color:var(--charcoal-light);font-size:16px;max-width:600px;line-height:1.7;margin-bottom:48px}
-.text-center{text-align:center}
-.mx-auto{margin-left:auto;margin-right:auto}
-
-/* Services — comes BEFORE offers on this page */
-.services{padding:80px 0;background:var(--white)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{border:1px solid #e5e7eb;border-radius:10px;padding:28px 24px;transition:border-color .2s,transform .2s}
-.service-card:hover{border-color:var(--amber);transform:translateY(-2px)}
-.service-card h3{font-family:var(--font-heading);font-size:20px;color:var(--navy);margin-bottom:8px;display:flex;align-items:center;gap:10px}
-.service-card h3::before{content:'';width:8px;height:8px;background:var(--amber);border-radius:50%;flex-shrink:0}
-.service-card p{color:var(--charcoal-light);font-size:14px;line-height:1.6;padding-left:18px}
-
-/* Offers */
-.offers{padding:80px 0;background:var(--light)}
-.offers-row{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.offer-card{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;transition:transform .2s,box-shadow .2s}
-.offer-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.08)}
-.offer-top{background:var(--navy);padding:24px;text-align:center}
-.offer-percent{font-family:var(--font-heading);font-size:48px;color:var(--amber)}
-.offer-type{color:rgba(255,255,255,.7);font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-top:4px}
-.offer-bottom{padding:24px;text-align:center}
-.offer-bottom h3{font-family:var(--font-heading);font-size:22px;color:var(--navy);margin-bottom:8px}
-.offer-bottom p{color:var(--charcoal-light);font-size:14px;line-height:1.5}
-
-/* Process */
-.process{padding:80px 0;background:var(--white)}
-.process-timeline{display:flex;align-items:flex-start;gap:0;position:relative;max-width:960px;margin:0 auto}
-.process-timeline::before{content:'';position:absolute;top:26px;left:26px;right:26px;height:2px;background:#e5e7eb}
-.process-step{flex:1;text-align:center;position:relative;padding:0 12px}
-.process-dot{width:52px;height:52px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:20px;color:var(--amber);margin:0 auto 16px;position:relative;z-index:2}
-.process-step h4{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px}
-.process-step p{font-size:13px;color:var(--charcoal-light);line-height:1.5}
-
-/* Reviews */
-.reviews{padding:80px 0;background:var(--navy);color:var(--white)}
-.reviews .section-title{color:var(--white)}
-.reviews .section-subtitle{color:rgba(255,255,255,.6)}
-.reviews-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:920px;margin:0 auto}
-.review-card{background:rgba(255,255,255,.06);border-radius:12px;padding:36px;border:1px solid rgba(255,255,255,.1)}
-.review-stars{color:var(--amber);font-size:18px;margin-bottom:14px;letter-spacing:2px}
-.review-card blockquote{font-size:16px;line-height:1.7;color:rgba(255,255,255,.85);margin-bottom:18px;font-style:italic}
-.review-author{font-weight:600;font-size:15px}
-.review-location{color:var(--amber);font-size:13px;margin-top:2px}
-
-/* Trust Bar */
-.trust-bar{padding:48px 0;background:var(--light)}
-.trust-row{display:flex;justify-content:center;gap:60px;flex-wrap:wrap}
-.trust-item{text-align:center}
-.trust-number{font-family:var(--font-heading);font-size:36px;color:var(--amber)}
-.trust-label{font-size:14px;color:var(--charcoal);font-weight:500;margin-top:2px}
-
-/* CTA */
-.cta-section{padding:80px 0;background:var(--white);text-align:center}
-.cta-section h2{font-family:var(--font-heading);font-size:40px;color:var(--navy);margin-bottom:16px}
-.cta-section p{font-size:17px;color:var(--charcoal-light);margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7}
-.cta-phone{font-family:var(--font-heading);font-size:36px;color:var(--amber);display:block;margin-bottom:24px}
-
-/* Footer */
-footer{background:var(--navy);color:rgba(255,255,255,.5);padding:32px 0;font-size:13px;text-align:center}
-footer .container{display:flex;flex-direction:column;align-items:center;gap:12px}
-footer .logo{font-size:20px;color:var(--white)}
-
-/* Responsive */
-@media(max-width:1024px){
-.services-grid{grid-template-columns:repeat(2,1fr)}
-.process-timeline{flex-direction:column;align-items:center;gap:24px}
-.process-timeline::before{display:none}
-}
+.site-nav { background: #fff; padding: 0; border-bottom: 1px solid #E5E7EB; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.site-nav .nav-inner { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.site-nav .nav-logo { font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 700; color: var(--dark); text-decoration: none; white-space: nowrap; }
+.site-nav .nav-logo span { color: var(--primary); }
+.site-nav .nav-links { display: flex; align-items: center; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.site-nav .nav-links a { font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; transition: color 0.2s; padding: 6px 0; }
+.site-nav .nav-links a:hover { color: var(--primary); }
+.site-nav .nav-links a.nav-cta-btn { background: var(--primary); color: #fff !important; padding: 10px 22px !important; border-radius: 6px; font-weight: 600; font-size: 14px; transition: background 0.2s; display: inline-block; }
+.site-nav .nav-links a.nav-cta-btn:hover { background: var(--primary-dark); }
+.site-nav .nav-links a.nav-phone { font-weight: 600; color: var(--dark) !important; }
+.nav-hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+.nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); transition: all 0.3s; }
 @media(max-width:768px){
-.hero h1{font-size:34px}
-.hero{min-height:480px}
-.services-grid{grid-template-columns:1fr}
-.offers-row{grid-template-columns:1fr}
-.reviews-grid{grid-template-columns:1fr}
-.section-title{font-size:30px}
-.trust-row{gap:32px}
-.header .container{flex-direction:column;text-align:center}
-.header-right{flex-direction:column;gap:12px}
+.nav-hamburger { display: flex; }
+.site-nav .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #E5E7EB; box-shadow: 0 4px 12px rgba(0,0,0,0.08); gap: 0; }
+.site-nav .nav-links.open { display: flex; }
+.site-nav .nav-links a { padding: 12px 0; border-bottom: 1px solid #f0f0f0; width: 100%; }
+.site-nav .nav-links a:last-child { border: none; }
+.site-nav .nav-links a.nav-cta-btn { text-align: center; margin-top: 8px; display: block; padding: 12px 22px !important; }
 }
 
-/* ─── Photo Gallery ─── */
-.gallery-section { padding: 80px 0; background: #F8FAFC; }
+.hero { position: relative; min-height: 88vh; display: flex; align-items: center; justify-content: center; text-align: center; background: url('images/kitchen-3.jpg') center/cover no-repeat; }
+.hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; color: #fff; padding: 80px 24px; }
+.hero-badge { display: inline-block; background: var(--primary); color: #fff; padding: 8px 24px; border-radius: 30px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; }
+.hero h1 { font-size: clamp(38px,5.5vw,64px); margin-bottom: 24px; color: #fff; }
+.hero p { font-size: 20px; line-height: 1.7; opacity: 0.9; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+.hero-stats { display: flex; gap: 48px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.2); justify-content: center; }
+.hero-stat strong { display: block; font-size: 32px; font-family: 'Poppins', sans-serif; color: var(--primary-light); }
+.hero-stat span { font-size: 13px; opacity: 0.8; text-transform: uppercase; }
+@media(max-width:768px){ .hero { min-height: 70vh; } .hero-stats { flex-wrap: wrap; gap: 24px; } }
+
+.contact-form-section { padding: 64px 0; background: linear-gradient(135deg, #0F172A 0%, var(--dark) 100%); color: #fff; position: relative; overflow: hidden; }
+.contact-form-section::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(ellipse, rgba(255,255,255,0.04) 0%, transparent 70%); pointer-events: none; }
+.form-layout { max-width: 1140px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.form-pitch h2 { font-family: 'Poppins', sans-serif; font-size: clamp(30px,4vw,44px); color: #fff; margin-bottom: 16px; }
+.form-pitch p { color: rgba(255,255,255,0.8); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; }
+.form-trust-items { display: flex; flex-direction: column; gap: 16px; }
+.form-trust-item { display: flex; align-items: center; gap: 14px; }
+.form-trust-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.form-trust-icon svg { width: 22px; height: 22px; stroke: var(--primary-light); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.form-trust-item strong { display: block; color: #fff; font-size: 0.95rem; }
+.form-trust-item span { color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+@media(max-width:768px){ .form-layout { grid-template-columns: 1fr; gap: 36px; } .form-pitch { text-align: center; } .form-trust-items { align-items: center; } }
+
+.contact-form { max-width: 480px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 36px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; z-index: 2; }
+.contact-form .form-title { font-family: 'Poppins', sans-serif; font-size: 24px; color: var(--dark); margin-bottom: 4px; text-align: center; font-weight: 700; }
+.contact-form .form-subtitle { color: var(--text-light); font-size: 0.9rem; text-align: center; margin-bottom: 24px; }
+.contact-form label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.9rem; color: var(--dark); }
+.contact-form input, .contact-form textarea { width: 100%; padding: 11px 14px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 0.95rem; font-family: 'Roboto', sans-serif; margin-bottom: 14px; transition: border-color 0.2s, box-shadow 0.2s; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,0,0,0.05); }
+.contact-form textarea { min-height: 80px; resize: vertical; }
+.contact-form button[type="submit"] { width: 100%; background: var(--primary); color: #fff; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.2s, transform 0.2s; font-family: 'Poppins', sans-serif; }
+.contact-form button[type="submit"]:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.contact-form button:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+.form-status { text-align: center; margin-top: 12px; font-size: 0.9rem; min-height: 20px; }
+.form-status.success { color: #16a34a; }
+.form-status.error { color: #dc2626; }
+.form-phone-fallback { text-align: center; margin-top: 12px; font-size: 0.85rem; color: var(--text-light); }
+.form-phone-fallback a { color: var(--primary); font-weight: 600; }
+
+.offers { padding: 80px 0; background: var(--bg); }
+.offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
+.offer-card { background: var(--bg-alt); border: none; border-left: 4px solid var(--primary); border-radius: 0; padding: 36px; text-align: left; transition: border-color 0.25s; }
+.offer-card:hover { border-left-color: var(--primary-dark); }
+.offer-pct { font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 800; color: var(--primary); line-height: 1; }
+.offer-label { font-size: 14px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+.offer-card h3 { margin-top: 16px; font-size: 22px; }
+.offer-card p { margin-top: 8px; color: var(--text-light); font-size: 15px; }
+.services { padding: 80px 0; background: var(--bg-alt); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+.service-item { display: flex; gap: 20px; align-items: flex-start; padding: 24px; border-bottom: 2px solid #E5E7EB; }
+.service-item:hover { border-bottom-color: var(--primary); }
+.service-icon { flex-shrink: 0; width: 48px; height: 48px; background: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.service-item h3 { font-size: 20px; margin-bottom: 6px; }
+.service-item p { color: var(--text-light); font-size: 15px; }
+
+.process { padding: 80px 0; background: var(--white); }
+.process-steps { max-width: 720px; margin: 48px auto 0; position: relative; }
+.process-steps::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 2px; background: #E5E7EB; }
+.step { display: flex; gap: 28px; margin-bottom: 40px; position: relative; }
+.step:last-child { margin-bottom: 0; }
+.step-number { flex-shrink: 0; width: 60px; height: 60px; background: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; color: var(--primary-light); position: relative; z-index: 1; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.step-content { padding-top: 12px; }
+.step h3 { font-size: 18px; margin-bottom: 6px; }
+.step p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
+
+.reviews { padding: 80px 0; background: var(--dark); color: #fff; }
+.reviews h2 { color: #fff; }
+.reviews .section-label { color: var(--primary-light); }
+.reviews .section-subtitle { color: rgba(255,255,255,0.7); }
+.reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px; margin-top: 48px; }
+.review-card { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 36px; border: 1px solid rgba(255,255,255,0.1); }
+.review-stars { color: var(--primary-light); font-size: 18px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card blockquote { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.85); font-style: italic; margin-bottom: 20px; }
+.review-author { font-weight: 700; color: #fff; }
+.review-location { font-size: 14px; color: rgba(255,255,255,0.5); }
+@media(max-width:768px){ .reviews-grid { grid-template-columns: 1fr; } }
+
+.local { padding: 80px 0; }
+.local-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 40px; }
+.local-img { border-radius: 12px; width: 100%; height: 420px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.local-text h3 { font-size: 28px; margin-bottom: 16px; }
+.local-text p { color: var(--text-light); font-size: 16px; margin-bottom: 16px; line-height: 1.8; }
+.local-text ul { list-style: none; margin-top: 20px; }
+.local-text ul li { padding: 8px 0 8px 24px; position: relative; color: var(--text); font-size: 15px; }
+.local-text ul li::before { content: ''; position: absolute; left: 0; top: 16px; width: 10px; height: 10px; background: var(--primary); border-radius: 2px; }
+@media(max-width:768px){ .local-split { grid-template-columns: 1fr; gap: 32px; } }
+
+.cta { padding: 80px 0; background: linear-gradient(135deg, var(--dark) 0%, #0F172A 100%); color: #fff; text-align: center; }
+.cta h2 { color: #fff; font-size: clamp(30px,4vw,44px); margin-bottom: 16px; }
+.cta p { opacity: 0.85; font-size: 18px; max-width: 560px; margin: 0 auto 32px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-phone { font-family: 'Poppins', sans-serif; font-size: 32px; color: var(--primary-light); margin-top: 28px; font-weight: 700; }
+.cta-phone a { color: var(--primary-light); text-decoration: none; }
+
+footer { background: #0F1924; color: rgba(255,255,255,0.6); padding: 48px 0 24px; font-size: 14px; }
+footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+footer a { color: var(--primary-light); text-decoration: none; }
+.footer-license { text-align: center; padding: 8px 0 0; font-size: 0.8rem; opacity: 0.6; color: rgba(255,255,255,0.5); }
+
+.gallery-section { padding: 80px 0; background: var(--bg); }
 .gallery-section .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .gallery-header { text-align: center; margin-bottom: 48px; }
-.gallery-header .gallery-label {
-  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px;
-  text-transform: uppercase; color: #D97706; margin-bottom: 12px;
-}
-.gallery-header h2 {
-  font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(28px, 4vw, 42px);
-  color: #1B2A41; margin-bottom: 16px;
-}
-.gallery-header p { color: #6B7280; font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+.gallery-header .gallery-label { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); margin-bottom: 12px; }
+.gallery-header h2 { font-family: 'Poppins', sans-serif; font-size: clamp(28px,4vw,42px); color: var(--dark); margin-bottom: 16px; }
+.gallery-header p { color: var(--text-light); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
 .gallery-filters { display: flex; justify-content: center; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; }
-.gallery-filter-btn {
-  padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff;
-  font-size: 14px; font-weight: 600; color: #374151; cursor: pointer; transition: all 0.2s;
-  font-family: 'Inter', sans-serif;
-}
-.gallery-filter-btn:hover { border-color: #D97706; color: #D97706; }
-.gallery-filter-btn.active { background: #D97706; color: #fff; border-color: #D97706; }
-.gallery-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-.gallery-item {
-  position: relative; border-radius: 12px; overflow: hidden;
-  aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.4s ease;
-}
+.gallery-filter-btn { padding: 8px 20px; border: 2px solid #E5E7EB; border-radius: 24px; background: #fff; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s; font-family: 'Roboto', sans-serif; }
+.gallery-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+.gallery-filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.gallery-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .gallery-item:hover img { transform: scale(1.05); }
-.gallery-item .overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(27,42,65,0.7) 0%, transparent 50%);
-  opacity: 0; transition: opacity 0.3s;
-  display: flex; align-items: flex-end; padding: 20px;
-}
+.gallery-item .overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
 .gallery-item:hover .overlay { opacity: 1; }
 .overlay-text { color: #fff; font-weight: 600; font-size: 15px; }
-.gallery-show-more {
-  text-align: center; margin-top: 36px;
-}
-.gallery-show-more button {
-  padding: 14px 36px; background: #1B2A41; color: #fff; border: none;
-  border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer;
-  font-family: 'Inter', sans-serif; transition: background 0.2s;
-}
-.gallery-show-more button:hover { background: #0F172A; }
+.gallery-show-more { text-align: center; margin-top: 36px; }
+.gallery-show-more button { padding: 14px 36px; background: var(--dark); color: #fff; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: 'Roboto', sans-serif; transition: background 0.2s; }
+.gallery-show-more button:hover { background: var(--dark-light); }
+@media(max-width:768px){ .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; } .gallery-item { border-radius: 8px; } }
 
-/* Lightbox */
-.lightbox {
-  display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
-}
+.lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; }
 .lightbox.active { display: flex; }
-.lightbox img {
-  max-width: 90vw; max-height: 85vh; border-radius: 8px;
-  object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-}
-.lightbox-close {
-  position: absolute; top: 20px; right: 28px;
-  background: none; border: none; color: #fff; font-size: 36px;
-  cursor: pointer; z-index: 10001; opacity: 0.8; transition: opacity 0.2s;
-}
+.lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
+.lightbox-close { position: absolute; top: 20px; right: 28px; background: none; border: none; color: #fff; font-size: 36px; cursor: pointer; z-index: 10001; opacity: 0.8; }
 .lightbox-close:hover { opacity: 1; }
-.lightbox-nav {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,0.15); border: none; color: #fff;
-  font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px;
-  transition: background 0.2s;
-}
+.lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.15); border: none; color: #fff; font-size: 28px; padding: 12px 18px; cursor: pointer; border-radius: 6px; transition: background 0.2s; }
 .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
 .lightbox-prev { left: 20px; }
 .lightbox-next { right: 20px; }
-.lightbox-counter {
-  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-  color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500;
-}
-@media (max-width: 768px) {
-  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
-  .gallery-item { border-radius: 8px; }
-  .lightbox-nav { padding: 8px 12px; font-size: 22px; }
-}
-
-
-/* ─── Contact Form (top of page, two-column) ─── */
-.contact-form-section{padding:64px 0;background:linear-gradient(135deg,#0F172A 0%,#1B2A41 100%);color:#fff;position:relative;overflow:hidden}
-.contact-form-section::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(217,119,6,0.08) 0%,transparent 70%);pointer-events:none}
-.form-layout{max-width:1140px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.form-pitch h2{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(30px,4vw,44px);color:#fff;margin-bottom:16px;line-height:1.15}
-.form-pitch p{color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.7;margin-bottom:28px}
-.form-trust-items{display:flex;flex-direction:column;gap:16px}
-.form-trust-item{display:flex;align-items:center;gap:14px}
-.form-trust-icon{width:44px;height:44px;background:rgba(217,119,6,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.form-trust-icon svg{width:22px;height:22px;stroke:#D97706;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.form-trust-item strong{display:block;color:#fff;font-size:0.95rem;font-weight:600}
-.form-trust-item span{color:rgba(255,255,255,0.6);font-size:0.85rem}
-.contact-form{background:#fff;border-radius:16px;padding:36px;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;z-index:2}
-.contact-form .form-title{font-family:'DM Serif Display',Georgia,serif;font-size:24px;color:#1B2A41;margin-bottom:4px;text-align:center}
-.contact-form .form-subtitle{color:#6B7280;font-size:0.9rem;text-align:center;margin-bottom:24px}
-.contact-form label{display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;color:#1B2A41}
-.contact-form input,.contact-form textarea{width:100%;padding:11px 14px;border:1px solid #d1d5db;border-radius:8px;font-size:0.95rem;font-family:'Inter',system-ui,sans-serif;margin-bottom:14px;transition:border-color 0.2s,box-shadow 0.2s}
-.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:#D97706;box-shadow:0 0 0 3px rgba(217,119,6,0.1)}
-.contact-form textarea{min-height:80px;resize:vertical}
-.contact-form button{width:100%;background:#D97706;color:#fff;padding:15px;border:none;border-radius:8px;font-weight:700;font-size:1.05rem;cursor:pointer;transition:background 0.2s,transform 0.2s;font-family:'Inter',system-ui,sans-serif}
-.contact-form button:hover{background:#B45309;transform:translateY(-1px);box-shadow:0 8px 24px rgba(217,119,6,0.3)}
-.contact-form button:disabled{opacity:0.6;cursor:not-allowed;transform:none;box-shadow:none}
-.form-status{text-align:center;margin-top:12px;font-size:0.9rem;min-height:20px}
-.form-status.success{color:#16a34a}
-.form-status.error{color:#dc2626}
-.form-phone-fallback{text-align:center;margin-top:12px;font-size:0.85rem;color:#6B7280}
-.form-phone-fallback a{color:#D97706;font-weight:600;text-decoration:none}
-@media(max-width:768px){
-.form-layout{grid-template-columns:1fr;gap:36px}
-.form-pitch{text-align:center}
-.form-trust-items{align-items:center}
-.contact-form-section{padding:48px 0}
-}
-
-
-/* ─── Standardized Navigation ─── */
-.site-nav{background:#fff;padding:0;border-bottom:1px solid #E5E7EB;position:sticky;top:0;z-index:100;box-shadow:0 1px 3px rgba(0,0,0,0.05)}
-.site-nav .nav-inner{max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;justify-content:space-between;align-items:center}
-.site-nav .nav-logo{font-family:'DM Serif Display',Georgia,serif;font-size:22px;color:#1B2A41;text-decoration:none;white-space:nowrap}
-.site-nav .nav-logo span{color:#D97706}
-.site-nav .nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0}
-.site-nav .nav-links a{font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:500;color:#374151;text-decoration:none;transition:color 0.2s;padding:6px 0}
-.site-nav .nav-links a:hover{color:#D97706}
-.site-nav .nav-links a.nav-cta-btn{background:#D97706;color:#fff !important;padding:10px 22px !important;border-radius:6px;font-weight:600;font-size:14px;transition:background 0.2s;display:inline-block}
-.site-nav .nav-links a.nav-cta-btn:hover{background:#B45309;color:#fff !important}
-.site-nav .nav-links a.nav-phone{font-weight:600;color:#1B2A41 !important;font-size:14px}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
-.nav-hamburger span{display:block;width:24px;height:2px;background:#1B2A41;transition:all 0.3s}
-@media(max-width:768px){
-.nav-hamburger{display:flex}
-.site-nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;border-bottom:1px solid #E5E7EB;box-shadow:0 4px 12px rgba(0,0,0,0.08);gap:0}
-.site-nav .nav-links.open{display:flex}
-.site-nav .nav-links a{padding:12px 0;border-bottom:1px solid #f0f0f0;width:100%}
-.site-nav .nav-links a:last-child{border:none}
-.site-nav .nav-links a.nav-cta-btn{text-align:center;margin-top:8px;display:block;padding:12px 22px !important}
-}
-
+.lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.7); font-size: 14px; }
+@media(max-width:768px){ .lightbox-nav { padding: 8px 12px; font-size: 22px; } }
+.offers { border-top: 4px solid var(--primary); }
 </style>
 </head>
 <body>
-
-<!-- Navigation -->
 <nav class="site-nav">
 <div class="nav-inner">
   <a href="#" class="nav-logo">Home by <span>Tom</span></a>
@@ -285,116 +198,36 @@ footer .logo{font-size:20px;color:var(--white)}
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-<li><a href="#services">Services</a></li>
-<li><a href="#gallery">Our Work</a></li>
-<li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
-<li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Our Work</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="tel:4159079070" class="nav-phone">(415) 907-9070</a></li>
+    <li><a href="#contact" class="nav-cta-btn">Free Estimate</a></li>
   </ul>
 </div>
 </nav>
-
-
-<!-- Header -->
-
-
-<!-- Hero -->
 <section class="hero">
-<div class="hero-bg"></div>
-<div class="hero-overlay"></div>
-<div class="container">
-<div class="hero-content">
-<div class="hero-tag">Consulting &bull; Designing &bull; Building</div>
-<h1>East Bay's Premier Home Remodeling Team</h1>
-<p>From Walnut Creek to Danville, Lafayette to Orinda — East Bay homeowners trust Home by Tom for expertly crafted kitchen, bathroom, and whole-home renovations. Over 21 years of local experience.</p>
-<a href="tel:4159079070" class="btn-primary">Schedule Free Consultation</a>
-<div class="hero-serving">Proudly serving Walnut Creek, Danville, Lafayette, Orinda, Pleasant Hill, Concord & beyond</div>
-</div>
-</div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">Licensed & Insured Contractor</span>
+      <h1>Crafting Beautiful Homes Across the Bay</h1>
+      <p>Every great home deserves a kitchen that inspires and bathrooms that rejuvenate. We bring 21 years of design expertise and precision craftsmanship to every project.</p>
+      <div class="hero-actions"><a href="tel:4159079070" class="btn btn-primary">Get Free Estimate</a><a href="#gallery" class="btn btn-white">View Our Work</a></div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>21+</strong><span>Years Experience</span></div>
+        <div class="hero-stat"><strong>200+</strong><span>5-Star Reviews</span></div>
+        <div class="hero-stat"><strong>$0</strong><span>Down to Start</span></div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- Trust Bar -->
-<section class="trust-bar">
-<div class="container">
-<div class="trust-row">
-<div class="trust-item">
-<div class="trust-number">21+</div>
-<div class="trust-label">Years Experience</div>
-</div>
-<div class="trust-item">
-<div class="trust-number">200+</div>
-<div class="trust-label">5-Star Reviews</div>
-</div>
-<div class="trust-item">
-<div class="trust-number">100%</div>
-<div class="trust-label">Licensed & Insured</div>
-</div>
-<div class="trust-item">
-<div class="trust-number">12hr</div>
-<div class="trust-label">Proposal Turnaround</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Services (BEFORE offers on this page) -->
-<section class="services" id="services">
-<div class="container">
-<div class="section-label">Our Expertise</div>
-<h2 class="section-title">What We Build for East Bay Homeowners</h2>
-<p class="section-subtitle">Every project is handled in-house from design through final walkthrough. No subcontractor roulette.</p>
-<div class="services-grid">
-<div class="service-card">
-<h3>Full Home Remodeling</h3>
-<p>Comprehensive renovations that transform every room, from layout redesign to finishing touches.</p>
-</div>
-<div class="service-card">
-<h3>Kitchen Remodeling</h3>
-<p>Custom cabinetry, premium countertops, and intelligent layouts designed for real life.</p>
-</div>
-<div class="service-card">
-<h3>Bathroom Remodeling</h3>
-<p>Spa-caliber bathrooms with walk-in showers, heated floors, and custom tile work.</p>
-</div>
-<div class="service-card">
-<h3>ADU Construction</h3>
-<p>Complete ADU builds — design, permits, and construction — adding value to your East Bay property.</p>
-</div>
-<div class="service-card">
-<h3>Home Additions</h3>
-<p>Expand your living space with seamlessly integrated room additions and second stories.</p>
-</div>
-<div class="service-card">
-<h3>Outdoor Living</h3>
-<p>Decks, patios, and outdoor kitchens built for the East Bay lifestyle and climate.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ═══ CONTACT FORM — Top of Page ═══ -->
 <section class="contact-form-section" id="contact">
 <div class="form-layout">
   <div class="form-pitch">
     <h2>Get Your Free Estimate Today</h2>
     <p>Tell us about your project and we'll get back to you with a detailed proposal — usually within 12 hours. No pressure, no obligation.</p>
-    <div class="form-trust-items">
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-        <div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div>
-      </div>
-      <div class="form-trust-item">
-        <div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div>
-        <div><strong>Free 3D Design</strong><span>See your space before we build</span></div>
-      </div>
-    </div>
+    <div class="form-trust-items"><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Licensed & Insured</strong><span>CA Lic. #1079020</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><strong>200+ Five-Star Reviews</strong><span>Trusted by Bay Area families</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><strong>Proposal in 12 Hours</strong><span>Fast, transparent pricing</span></div></div><div class="form-trust-item"><div class="form-trust-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></div><div><strong>Free 3D Design</strong><span>See your space before we build</span></div></div></div>
   </div>
   <div>
     <form class="contact-form" id="contactForm" novalidate>
@@ -413,115 +246,10 @@ footer .logo{font-size:20px;color:var(--white)}
       <div class="form-status" id="formStatus"></div>
       <div class="form-phone-fallback">Or call us: <a href="tel:4159079070">(415) 907-9070</a></div>
     </form>
-    <noscript><p style="text-align:center;margin-top:16px;color:#ccc;">Forms require JavaScript. Call us at <a href="tel:4159079070" style="color:#D97706;">(415) 907-9070</a> instead.</p></noscript>
+    <noscript><p style="text-align:center;margin-top:16px;color:#999;">Forms require JavaScript. Call <a href="tel:4159079070" style="color:var(--primary);">(415) 907-9070</a> instead.</p></noscript>
   </div>
 </div>
 </section>
-
-
-<!-- Offers -->
-<section class="offers">
-<div class="container">
-<div class="section-label text-center">Special Offers</div>
-<h2 class="section-title text-center">East Bay Exclusive Savings</h2>
-<p class="section-subtitle text-center mx-auto">Take advantage of limited-time pricing on our most popular remodeling services.</p>
-<div class="offers-row">
-<div class="offer-card">
-<div class="offer-top">
-<div class="offer-percent">35%</div>
-<div class="offer-type">Off</div>
-</div>
-<div class="offer-bottom">
-<h3>Kitchen Remodeling</h3>
-<p>Premium materials, expert design, and flawless installation — all at 35% off.</p>
-</div>
-</div>
-<div class="offer-card">
-<div class="offer-top">
-<div class="offer-percent">25%</div>
-<div class="offer-type">Off</div>
-</div>
-<div class="offer-bottom">
-<h3>Bathroom Remodeling</h3>
-<p>Complete bathroom transformations with luxury finishes at an unbeatable value.</p>
-</div>
-</div>
-<div class="offer-card">
-<div class="offer-top">
-<div class="offer-percent">FREE</div>
-<div class="offer-type">Included</div>
-</div>
-<div class="offer-bottom">
-<h3>3D Design Rendering</h3>
-<p>Visualize your new space in photorealistic 3D before construction begins.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Process -->
-<section class="process">
-<div class="container">
-<div class="section-label text-center">How It Works</div>
-<h2 class="section-title text-center">Five Steps to Your Dream Home</h2>
-<p class="section-subtitle text-center mx-auto">A streamlined, stress-free process from first call to final reveal.</p>
-<div class="process-timeline">
-<div class="process-step">
-<div class="process-dot">1</div>
-<h4>Free Consultation</h4>
-<p>We visit your home and discuss your vision, budget, and timeline.</p>
-</div>
-<div class="process-step">
-<div class="process-dot">2</div>
-<h4>12-Hour Proposal</h4>
-<p>A detailed, no-surprise proposal delivered within 12 hours.</p>
-</div>
-<div class="process-step">
-<div class="process-dot">3</div>
-<h4>3D Design</h4>
-<p>Your space rendered in 3D so you see it before we build it.</p>
-</div>
-<div class="process-step">
-<div class="process-dot">4</div>
-<h4>Material Selection</h4>
-<p>Handpick finishes and materials with our design team's guidance.</p>
-</div>
-<div class="process-step">
-<div class="process-dot">5</div>
-<h4>Construction</h4>
-<p>Expert crews bring the design to life, on schedule and on budget.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Reviews -->
-<section class="reviews">
-<div class="container">
-<div class="section-label text-center">Client Stories</div>
-<h2 class="section-title text-center">Loved by East Bay Homeowners</h2>
-<p class="section-subtitle text-center mx-auto">Don't take our word for it. Here's what our neighbors have to say.</p>
-<div class="reviews-grid">
-<div class="review-card">
-<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<blockquote>"We had our entire Danville kitchen gutted and rebuilt by Home by Tom. From the 3D rendering to the final installation, every detail was handled with care. The granite countertops and custom cabinets exceeded our expectations. Worth every penny."</blockquote>
-<div class="review-author">Mark & Lisa R.</div>
-<div class="review-location">Danville, CA</div>
-</div>
-<div class="review-card">
-<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-<blockquote>"Living in Lafayette, we needed a contractor who understood the local permitting process and design standards. Tom's team navigated everything effortlessly. Our bathroom remodel was completed two days early and looks like it belongs in a magazine."</blockquote>
-<div class="review-author">Patricia K.</div>
-<div class="review-location">Lafayette, CA</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CTA -->
-
-<!-- ═══ OUR WORK GALLERY ═══ -->
 <section class="gallery-section" id="gallery">
 <div class="section-inner">
   <div class="gallery-header">
@@ -572,8 +300,6 @@ footer .logo{font-size:20px;color:var(--white)}
   </div>
 </div>
 </section>
-
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
   <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
@@ -581,114 +307,118 @@ footer .logo{font-size:20px;color:var(--white)}
   <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
   <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
-
-<script>
-const galleryPhotos = ['images/kitchen-1.jpg', 'images/kitchen-2.jpg', 'images/kitchen-3.jpg', 'images/kitchen-4.jpg', 'images/kitchen-5.jpg', 'images/kitchen-6.jpg', 'images/kitchen-7.jpg', 'images/kitchen-8.jpg', 'images/kitchen-9.jpg', 'images/kitchen-10.jpg', 'images/kitchen-11.jpg', 'images/kitchen-12.jpg', 'images/kitchen-13.jpg', 'images/kitchen-14.jpg', 'images/kitchen-15.jpg', 'images/bathroom-1.jpg', 'images/bathroom-2.jpg', 'images/bathroom-3.jpg', 'images/bathroom-4.jpg', 'images/bathroom-5.jpg', 'images/bathroom-6.jpg', 'images/bathroom-7.jpg', 'images/bathroom-8.jpg', 'images/bathroom-9.jpg', 'images/bathroom-10.jpg', 'images/outdoor-1.jpg', 'images/outdoor-2.jpg', 'images/outdoor-3.jpg', 'images/outdoor-4.jpg', 'images/detail-1.jpg'];
-const galleryLabels = ['Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Kitchen Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Bathroom Remodel', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Outdoor Living', 'Craftsmanship Detail'];
-let currentPhoto = 0;
-let visiblePhotos = galleryPhotos.map((_, i) => i);
-
-function filterGallery(cat) {
-  document.querySelectorAll('.gallery-filter-btn').forEach(b => b.classList.remove('active'));
-  event.target.classList.add('active');
-  const items = document.querySelectorAll('.gallery-item');
-  let count = 0;
-  items.forEach(item => {
-    const show = cat === 'all' || item.dataset.category === cat;
-    item.style.display = show ? '' : 'none';
-    if (show) count++;
-  });
-  document.getElementById('showMoreBtn').style.display = 'none';
-  visiblePhotos = [];
-  items.forEach((item, i) => { if (item.style.display !== 'none') visiblePhotos.push(i); });
-}
-
-function showAllPhotos() {
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    if (item.dataset.category) item.style.display = '';
-  });
-  document.getElementById('showMoreBtn').style.display = 'none';
-  visiblePhotos = galleryPhotos.map((_, i) => i);
-}
-
-function openLightbox(idx) {
-  currentPhoto = idx;
-  updateLightbox();
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function navLightbox(dir) {
-  const currentIdx = visiblePhotos.indexOf(currentPhoto);
-  let nextIdx = currentIdx + dir;
-  if (nextIdx < 0) nextIdx = visiblePhotos.length - 1;
-  if (nextIdx >= visiblePhotos.length) nextIdx = 0;
-  currentPhoto = visiblePhotos[nextIdx];
-  updateLightbox();
-}
-
-function updateLightbox() {
-  document.getElementById('lightbox-img').src = galleryPhotos[currentPhoto];
-  const pos = visiblePhotos.indexOf(currentPhoto) + 1;
-  document.getElementById('lightbox-counter').textContent = pos + ' / ' + visiblePhotos.length;
-}
-
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
-
-document.addEventListener('keydown', function(e) {
-  if (!document.getElementById('lightbox').classList.contains('active')) return;
-  if (e.key === 'Escape') closeLightbox();
-  if (e.key === 'ArrowLeft') navLightbox(-1);
-  if (e.key === 'ArrowRight') navLightbox(1);
-});
-</script>
-<section class="cta-section">
-<div class="container">
-<h2>Start Your East Bay Remodel Today</h2>
-<p>Whether it's a kitchen refresh or a whole-home transformation, it begins with a conversation. Call us for a free, no-obligation consultation.</p>
-<a href="tel:4159079070" class="cta-phone">(415) 907-9070</a>
-<a href="tel:4159079070" class="btn-primary">Get Your Free Estimate</a>
-</div>
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Full-Service Remodeling for Bay Area Homes</h2>
+    <p class="section-subtitle">From start to finish, we handle every detail with precision and care.</p>
+    <div class="services-grid"><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg></div><div><h3>Kitchen Remodeling</h3><p>Complete kitchen renovations with custom cabinetry, stone countertops, premium appliances, and thoughtful layouts designed for how you live.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg></div><div><h3>Bathroom Remodeling</h3><p>Luxurious bathroom overhauls with walk-in showers, freestanding tubs, custom vanities, and high-end fixtures for a true spa experience.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h3>Full Home Remodeling</h3><p>Whole-house renovations that reimagine your entire living space. We coordinate every trade and detail from start to finish.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><div><h3>ADU Construction</h3><p>Accessory dwelling units that add value and versatility to your property. Full design-build from permits to completion.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div><h3>Home Additions</h3><p>Expand your living space with seamless room additions that blend perfectly with your home's existing architecture and style.</p></div></div><div class="service-item"><div class="service-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div><div><h3>Outdoor Living</h3><p>Outdoor kitchens, patios, pergolas, and living spaces designed for year-round entertainment and relaxation.</p></div></div></div>
+  </div>
 </section>
-
-<!-- Footer -->
+<section class="offers">
+  <div class="container text-center">
+    <span class="section-label">Limited-Time Offers</span>
+    <h2 class="section-title">Exclusive Savings for Bay Area Homeowners</h2>
+    <p class="section-subtitle mx-auto">Start your dream project today with premium materials, expert design, and unbeatable value.</p>
+    <div class="offers-grid"><div class="offer-card"><div class="offer-pct">35%</div><div class="offer-label">Off</div><h3>Kitchen Remodeling</h3><p>Complete kitchen transformations with custom cabinetry, quartz countertops, and premium finishes.</p></div><div class="offer-card"><div class="offer-pct">25%</div><div class="offer-label">Off</div><h3>Bathroom Remodeling</h3><p>Spa-inspired bathrooms with heated floors, frameless glass, and designer tile.</p></div><div class="offer-card"><div class="offer-pct">Free</div><div class="offer-label">Included</div><h3>3D Design Rendering</h3><p>Visualize your remodel before construction begins with photorealistic 3D renderings.</p></div></div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="container text-center">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">Our Proven 5-Step Process</h2>
+    <div class="process-steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h3>Free Consultation</h3><p>We visit your home, discuss your vision, and take measurements at no cost.</p></div></div><div class="step"><div class="step-number">2</div><div class="step-content"><h3>Proposal in 12hrs</h3><p>Receive a detailed, transparent proposal within 12 hours of your consultation.</p></div></div><div class="step"><div class="step-number">3</div><div class="step-content"><h3>3D Design</h3><p>See your project come to life with photorealistic 3D renderings before we start.</p></div></div><div class="step"><div class="step-number">4</div><div class="step-content"><h3>Materials Selection</h3><p>Choose from premium materials with guidance from our design team.</p></div></div><div class="step"><div class="step-number">5</div><div class="step-content"><h3>Construction</h3><p>Our skilled crews bring your project to life with meticulous attention to detail.</p></div></div></div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="container text-center">
+    <span class="section-label">Homeowner Reviews</span>
+    <h2 class="section-title">Loved by Bay Area Families</h2>
+    <p class="section-subtitle mx-auto">See what our clients have to say about working with us.</p>
+    <div class="reviews-grid"><div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"We interviewed five contractors before choosing this team. Best decision we made. Our kitchen is now the heart of our home — everyone gathers there."</blockquote>
+        <div class="review-author">Jennifer R.</div>
+        <div class="review-location">Lafayette</div>
+      </div><div class="review-card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>"Professional, punctual, and meticulous. Our master bathroom remodel was completed on time and under budget. Already recommended them to three neighbors."</blockquote>
+        <div class="review-author">Michael & Amy T.</div>
+        <div class="review-location">Orinda</div>
+      </div></div>
+  </div>
+</section>
+<section class="local" id="local">
+  <div class="container">
+    <div class="local-split">
+      <img src="images/kitchen-1.jpg" alt="Bay Area home" class="local-img">
+      <div class="local-text">
+        <span class="section-label">Proudly Local</span>
+        <h3>Trusted Throughout the East Bay</h3>
+        <p>From the tree-lined streets of Berkeley to the hills of Orinda, we've earned the trust of homeowners across the East Bay. Our portfolio speaks for itself — hundreds of completed projects, each tailored to the home and family.</p>
+        <p>Full-service general contractor. Licensed, bonded, and insured. We handle permits, design, and construction under one roof.</p>
+        <ul><li>Berkeley & El Cerrito</li><li>Albany & Kensington</li><li>Rockridge & Montclair</li><li>Temescal & Piedmont</li><li>Lafayette & Orinda</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Transform Your Bay Area Home?</h2>
+    <p>Schedule your free consultation today. We'll bring ideas, answer your questions, and provide a detailed proposal within 12 hours.</p>
+    <div class="cta-actions">
+      <a href="tel:4159079070" class="btn btn-primary">Call for Free Estimate</a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+    <div class="cta-phone"><a href="tel:4159079070">(415) 907-9070</a></div>
+  </div>
+</section>
 <footer>
-<div class="container">
-<a href="#" class="logo">Home by <span>Tom</span></a>
-<span>Serving the East Bay &bull; Walnut Creek &bull; Danville &bull; Lafayette &bull; Orinda &bull; Licensed & Insured</span>
-<span>(415) 907-9070</span>
-</div>
-
-<div style="text-align:center;padding:8px 0 0;font-size:0.8rem;opacity:0.6;color:rgba(255,255,255,0.5);">CA Lic. #1079020</div>
+  <div class="container">
+    <span>Homebytom &mdash; Licensed & Insured General Contractor &mdash; Serving Bay Area</span>
+    <a href="tel:4159079070">(415) 907-9070</a>
+  </div>
+  <div class="footer-license">CA Lic. #1079020</div>
 </footer>
-
 <script>
+const galleryPhotos=['images/kitchen-1.jpg','images/kitchen-2.jpg','images/kitchen-3.jpg','images/kitchen-4.jpg','images/kitchen-5.jpg','images/kitchen-6.jpg','images/kitchen-7.jpg','images/kitchen-8.jpg','images/kitchen-9.jpg','images/kitchen-10.jpg','images/kitchen-11.jpg','images/kitchen-12.jpg','images/kitchen-13.jpg','images/kitchen-14.jpg','images/kitchen-15.jpg','images/bathroom-1.jpg','images/bathroom-2.jpg','images/bathroom-3.jpg','images/bathroom-4.jpg','images/bathroom-5.jpg','images/bathroom-6.jpg','images/bathroom-7.jpg','images/bathroom-8.jpg','images/bathroom-9.jpg','images/bathroom-10.jpg','images/outdoor-1.jpg','images/outdoor-2.jpg','images/outdoor-3.jpg','images/outdoor-4.jpg','images/detail-1.jpg'];
+const galleryLabels=['Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Kitchen Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Bathroom Remodel','Outdoor Living','Outdoor Living','Outdoor Living','Outdoor Living','Craftsmanship Detail'];
+let currentPhoto=0;let visiblePhotos=galleryPhotos.map((_,i)=>i);
+function filterGallery(cat){
+document.querySelectorAll('.gallery-filter-btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+const items=document.querySelectorAll('.gallery-item');let count=0;
+items.forEach(item=>{const show=cat==='all'||item.dataset.category===cat;item.style.display=show?'':'none';if(show)count++;});
+document.getElementById('showMoreBtn').style.display='none';
+visiblePhotos=[];items.forEach((item,i)=>{if(item.style.display!=='none')visiblePhotos.push(i);});}
+function showAllPhotos(){document.querySelectorAll('.gallery-item').forEach(item=>{if(item.dataset.category)item.style.display='';});
+document.getElementById('showMoreBtn').style.display='none';visiblePhotos=galleryPhotos.map((_,i)=>i);}
+function openLightbox(idx){currentPhoto=idx;updateLightbox();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
+function navLightbox(dir){const ci=visiblePhotos.indexOf(currentPhoto);let ni=ci+dir;if(ni<0)ni=visiblePhotos.length-1;if(ni>=visiblePhotos.length)ni=0;currentPhoto=visiblePhotos[ni];updateLightbox();}
+function updateLightbox(){document.getElementById('lightbox-img').src=galleryPhotos[currentPhoto];const pos=visiblePhotos.indexOf(currentPhoto)+1;document.getElementById('lightbox-counter').textContent=pos+' / '+visiblePhotos.length;}
+document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLightbox();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1);});
+</script><script>
 (function(){
 var f=document.getElementById('contactForm'),s=document.getElementById('formStatus');
 if(!f)return;
 f.addEventListener('submit',function(e){
 e.preventDefault();
 s.className='form-status';s.textContent='';
-var b=f.querySelector('button');b.disabled=true;b.textContent='Sending...';
+var b=f.querySelector('button[type="submit"]');b.disabled=true;b.textContent='Sending...';
 var d={name:f.name.value.trim(),phone:f.phone.value.trim(),email:f.email.value.trim(),
        message:f.message.value.trim(),domain:location.hostname,website:f.website.value};
 if(!d.name||!d.phone||!d.email||!d.message){
 s.className='form-status error';s.textContent='Please fill in all fields.';
-b.disabled=false;b.textContent='Send Message';return;}
+b.disabled=false;b.textContent='Get My Free Estimate';return;}
 fetch('https://app.revnodeai.com/api/public/contact-form',{
 method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)
 }).then(function(r){return r.json()}).then(function(j){
 if(j.status==='ok'){s.className='form-status success';s.textContent='Thank you! We\'ll be in touch shortly.';f.reset();}
 else{s.className='form-status error';s.textContent=j.message||'Something went wrong. Please call us at (415) 907-9070.';}
 }).catch(function(){s.className='form-status error';s.textContent='Something went wrong. Please call us at (415) 907-9070.';
-}).finally(function(){b.disabled=false;b.textContent='Send Message';});
+}).finally(function(){b.disabled=false;b.textContent='Get My Free Estimate';});
 });
 })();
 </script>
